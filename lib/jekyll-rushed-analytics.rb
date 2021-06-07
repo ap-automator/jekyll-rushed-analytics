@@ -1,6 +1,6 @@
 Dir[File.dirname(__FILE__) + '/analytics/*.rb'].each {|file| require file[0..-4] }
 
-CONFIG_KEY = "jekyll_analytics"
+CONFIG_KEY = "jekyll_rushed_analytics"
 
 def inject(site)
   if ENV['JEKYLL_ENV'] and site.site.config.has_key? CONFIG_KEY
