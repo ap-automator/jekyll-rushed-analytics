@@ -1,6 +1,7 @@
-[![Build Status](https://travis-ci.org/hendrikschneider/jekyll-analytics.svg?branch=master)](https://travis-ci.org/hendrikschneider/jekyll-analytics)
-![](http://ruby-gem-downloads-badge.herokuapp.com/jekyll-analytics?type=total)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a07904b989dcb7e4e477/maintainability)](https://codeclimate.com/github/hendrikschneider/jekyll-analytics/maintainability)
+[![Build Status](https://travis-ci.com/sukrosono/jekyll-rushed-analytics.svg?branch=main)](https://travis-ci.com/sukrosono/jekyll-rushed-analytics)
+![](http://ruby-gem-downloads-badge.herokuapp.com/jekyll-rushed-analytics?type=total?metric=true)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1916a0d03d7fec0ce815/maintainability)](https://codeclimate.com/github/ap-automator/jekyll-rushed-analytics/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/1916a0d03d7fec0ce815/test_coverage)](https://codeclimate.com/github/ap-automator/jekyll-rushed-analytics/test_coverage)
 
 # Jekyll::analytics
 Webanalytics for Jekyll.
@@ -80,24 +81,5 @@ $ JEKYLL_ENV=production jekyll serve
 
 ## Contributing
 
-1. Fork it ( https://github.com/hendrikschneider/jekyll-analytics/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-How to add support for a new tracker:
-1. Create new tracker class in lib/analytics/YourTracker.rb
-  ```
-  #initialize and render must be implemented!
-  class YourTracker
-    def initialize(config)
-      #validate config
-    end
-
-    def render
-      return "Tracking code to insert into html > head"
-    end
-  end
-```
-2. Update README.md
+This just a fork, my general our general contributing guideline not yet stated!
+https://linktr.ee/sukrosono
