@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/sukrosono/jekyll-rushed-analytics.svg?branch=main)](https://travis-ci.com/sukrosono/jekyll-rushed-analytics)
+[![Build Status](https://travis-ci.com/ap-automator/jekyll-rushed-analytics.svg?branch=main)](https://travis-ci.com/sukrosono/jekyll-rushed-analytics)
 ![](http://ruby-gem-downloads-badge.herokuapp.com/jekyll-rushed-analytics?type=total?metric=true)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1916a0d03d7fec0ce815/maintainability)](https://codeclimate.com/github/ap-automator/jekyll-rushed-analytics/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1916a0d03d7fec0ce815/test_coverage)](https://codeclimate.com/github/ap-automator/jekyll-rushed-analytics/test_coverage)
@@ -79,6 +79,17 @@ For testing use
 $ JEKYLL_ENV=production jekyll serve
 ```
 
+## Embed your youtube subscribe button
+  To enable youtube [subscribe button](https://developers.google.com/youtube/youtube_subscribe_button), add this property on config/pluginname.
+```yml
+  Utube:
+    channelData: ap.programming # replace with your own
+```
+
+Then you can render it on your post or template.
+```html
+  {% include foo.html %}
+```
 ## Contributing
 
 This just a fork, my general our general contributing guideline not yet stated!
