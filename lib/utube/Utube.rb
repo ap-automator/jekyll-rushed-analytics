@@ -11,6 +11,7 @@ class Utube
   end
   def init
     WIDGET.sub! 'ap.programming', 'config.foo'
+  end
   def renderHtml()
     return SETUP
   end
@@ -20,5 +21,4 @@ class Utube
     u.puts(WIDGET)
     return u.close
   end
-end
 end

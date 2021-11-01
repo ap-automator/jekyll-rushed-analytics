@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/ap-automator/jekyll-rushed-analytics.svg?branch=main)](https://travis-ci.com/sukrosono/jekyll-rushed-analytics)
+[![Build Status](https://app.travis-ci.com/ap-automator/jekyll-rushed-analytics.svg?branch=master)](https://app.travis-ci.com/ap-automator/jekyll-rushed-analytics)
 ![](http://ruby-gem-downloads-badge.herokuapp.com/jekyll-rushed-analytics?type=total?metric=true)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1916a0d03d7fec0ce815/maintainability)](https://codeclimate.com/github/ap-automator/jekyll-rushed-analytics/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1916a0d03d7fec0ce815/test_coverage)](https://codeclimate.com/github/ap-automator/jekyll-rushed-analytics/test_coverage)
@@ -12,6 +12,7 @@ Jekyll-analytics: Webanalytics made easy.
 
 Supported:
   - [Google Analytics](https://analytics.google.com/analytics/web/)
+  - [Google AdSense](https://www.google.com/adsense/start/)
   - [Matomo](https://matomo.org/)
   - [Piwik](https://piwik.org/)
   - [mPulse](https://www.soasta.com/performance-monitoring/)
@@ -44,10 +45,11 @@ Configure the plugin in `_config.yml` by adding:
 
 ```yml
 jekyll-rushed-analytics:
-  GoogleAnalytics:          # Add, if you want to track with Google Analytics (Legacy)
+  GoogleAnalytics:   # Add, if you want to track with Google Analytics (Legacy)
     id: UA-123-456          # Required - replace with your tracking id
     anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
-
+  GoogleAdSense: # Add, if you want add adSense
+    ad-client: ca-pub-xxxxx # Required - replace with your ad client
   GoogleAnalytics4:          # Add, if you want to track with Google Analytics 4
     measurement_id: foo-bar-baz # Required - replace with your measurement id
 
@@ -88,7 +90,7 @@ $ JEKYLL_ENV=production jekyll serve
 
 Then you can render it on your post or template.
 ```html
-  {% include foo.html %}
+  {% include WIP.html %}
 ```
 ## Contributing
 
