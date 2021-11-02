@@ -20,6 +20,5 @@ jobs:
       - name: publish gem
         run: |
         gem build jekyll-rushed-analytics.gemspec
-        gem push --key github \
-        --host https://rubygems.pkg.github.com/ap-automator \
+        gem push --key github --host https://rubygems.pkg.github.com/ap-automator \
         jekyll-rushed-analytics.gemspec-*.gem
