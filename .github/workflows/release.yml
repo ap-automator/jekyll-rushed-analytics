@@ -22,11 +22,11 @@ jobs:
           mkdir -p $HOME/.gem
           touch $HOME/.gem/credentials
           chmod 0600 $HOME/.gem/credentials
-          echo "---\n:rubygems_api_key: ${RUBY_GEM_SEC}\n""
+          echo "---\n:rubygems_api_key: $key\n""
           gem build jekyll-rushed-analytics.gemspec
           bash -c "$push1 push2 push3"
         env:
-          key: ${{RUBY_GEM_SEC}}
+          key: ${{secret.RUBY_GEM_SEC}}
           push1: 'gem push --key github'
           push2: '--host https://rubygems.pkg.github.com/ap-automator'
           push3: 'jekyll-rushed-analytics.gemspec-*.gem'
