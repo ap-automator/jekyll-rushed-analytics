@@ -1,0 +1,25 @@
+name: ap.programming
+on: new release?
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v2
+        id: release
+        with:
+          release-type: ruby
+          package-name: jekyll-rushed-analytics
+          # bump-minor-pre-major: true
+          version-file: "jekyll-rushed-analytics.gemspec"
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
+        if: ${{ steps.release.outputs.release_created }}
+      - run: bundle install
+        if: ${{ steps.release.outputs.release_created }}
+      - name: publish gem
+        run: |
+        gem build jekyll-rushed-analytics.gemspec
+        gem push --key github \
+        --host https://rubygems.pkg.github.com/ap-automator \
+        jekyll-rushed-analytics.gemspec-*.gem

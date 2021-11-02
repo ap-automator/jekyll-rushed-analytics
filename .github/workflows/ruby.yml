@@ -18,9 +18,3 @@ jobs:
         gem install bundler
         bundle install --jobs 4 --retry 3
         bundle exec rake
-    - name: publish
-      run: |
-        gem build jekyll-rushed-analytics.gemspec
-        gem push --key github \
-        --host https://rubygems.pkg.github.com/ap-automator \
-        jekyll-rushed-analytics.gemspec-0.1.12-apha1.gem
