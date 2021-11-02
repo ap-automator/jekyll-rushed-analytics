@@ -29,4 +29,4 @@ jobs:
           key: ap-automator.RUBY_GEM_SEC
           push1: 'gem push --key github'
           push2: '--host https://rubygems.pkg.github.com/ap-automator'
-          push3: 'jekyll-rushed-analytics.gemspec-*.gem'
+          push3: 'jekyll-rushed-analytics-*.gem'
