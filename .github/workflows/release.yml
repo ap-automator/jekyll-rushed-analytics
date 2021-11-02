@@ -17,9 +17,9 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: bundle install
         if: ${{ steps.release.outputs.release_created }}
-      - name: publish gem
+      - name: "publish gem"
         run: |
         gem build jekyll-rushed-analytics.gemspec
-        > gem push --key github \
+        gem push --key github \
         --host https://rubygems.pkg.github.com/ap-automator \
         jekyll-rushed-analytics.gemspec-*.gem
