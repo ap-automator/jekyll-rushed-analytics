@@ -10,7 +10,7 @@ jobs:
           release-type: ruby
           package-name: jekyll-rushed-analytics
           # bump-minor-pre-major: true
-          version-file: "jekyll-rushed-analytics.gemspec"
+          version-file: "jekyll-rushed-analytics"
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.6.x
