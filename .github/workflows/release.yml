@@ -19,7 +19,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - name: "publish gem"
         env:
-          api-key: ${{RUBY_GEM_SEC}}
+          # api-key: ${{RUBY_GEM_SEC}}
           - push1= 'gem push --key github'
           - push2= '--host https://rubygems.pkg.github.com/ap-automator'
           - push3= 'jekyll-rushed-analytics.gemspec-*.gem'
