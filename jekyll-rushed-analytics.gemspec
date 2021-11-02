@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Plugin to easily add web analytics to your jekyll site without modifying your templates. Supported are: Google Analytics, Piwik, Matomo, MPulse"
   s.authors     = ["Adi Prasetyo", "Hendrik Schneider"]
   s.email       = 'monetize.your.times@gmail.com'
-  s.files       = ["jekyll-rushed-analytics.gemspec", "lib/jekyll-rushed-analytics.rb"
+  s.files       = ["lib/jekyll-rushed-analytics.rb"
     "lib/analytics/**.rb"]
   s.homepage    = 'https://github.com/ap-automator/jekyll-rushed-analytics'
   s.license     = 'MIT'

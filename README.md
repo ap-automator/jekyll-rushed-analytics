@@ -1,6 +1,7 @@
 [![Build Status](https://app.travis-ci.com/ap-automator/jekyll-rushed-analytics.svg?branch=master)](https://app.travis-ci.com/ap-automator/jekyll-rushed-analytics)
 ![](http://ruby-gem-downloads-badge.herokuapp.com/jekyll-rushed-analytics?type=total?metric=true)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1916a0d03d7fec0ce815/maintainability)](https://codeclimate.com/github/ap-automator/jekyll-rushed-analytics/maintainability)
+[![Gem Version](https://badge.fury.io/rb/jekyll-rushed-analytics.svg)](https://badge.fury.io/rb/jekyll-rushed-analytics)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1916a0d03d7fec0ce815/test_coverage)](https://codeclimate.com/github/ap-automator/jekyll-rushed-analytics/test_coverage)
 
 # Jekyll::analytics
