@@ -3,7 +3,7 @@ GEM
   specs:
     docile (1.4.0)
     power_assert (2.0.1)
-    rake (13.0.3)
+    rake (13.0.6)
     simplecov (0.21.2)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
