@@ -24,11 +24,11 @@ jobs:
       export GIT_BRANCH="${GITHUB_REF/refs\/heads\//}"
       ./cc-test-reporter after-build -r ${{secrets.CC_TEST_REPORTER_ID}}
   coverage:
-    name: test coverage
-    needs: build
     runs-on: ubuntu-latest
+    needs: build
     steps:
     - uses: actions/checkout@master
+      name: test coverage
     - name: Set up Ruby 2.7
       uses: actions/setup-ruby@v1
       with:
