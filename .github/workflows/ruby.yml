@@ -17,10 +17,11 @@ jobs:
         gem install bundler
         bundle install --jobs 4 --retry 3
         bundle exec rake
-  name: Publish code coverage
-      run: |
-        export GIT_BRANCH="${GITHUB_REF/refs\/heads\//}"
-        ./cc-test-reporter after-build -r ${{secrets.CC_TEST_REPORTER_ID}}
+  Publish code coverage:
+    needs: build
+    run: |
+      export GIT_BRANCH="${GITHUB_REF/refs\/heads\//}"
+      ./cc-test-reporter after-build -r ${{secrets.CC_TEST_REPORTER_ID}}
   coverage:
     name: test coverage
     needs: build
