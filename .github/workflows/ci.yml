@@ -1,5 +1,5 @@
 name: ap.programming
-on: [push, release]
+on: [push]
 jobs:
   build-release:
     runs-on: ubuntu-latest

@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Adi Prasetyo", "Hendrik Schneider"]
   s.email       = 'monetize.your.times@gmail.com'
   s.files       = ["lib/jekyll-rushed-analytics.rb"]
-  s.files += Dir["lib/analytics/*.rb"]
+  s.files       += Dir["lib/analytics/*.rb"]
   s.homepage    = 'https://github.com/ap-automator/jekyll-rushed-analytics'
   s.license     = 'MIT'
   s.metadata    = { "source_code_uri" => "https://github.com/ap-automator/jekyll-rushed-analytics" }

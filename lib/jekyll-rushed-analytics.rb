@@ -8,7 +8,11 @@ def inject(site)
       analyzerClass = Module.const_get(a)
       config = site.site.config[CONFIG_KEY][a]
       analytics_object = analyzerClass.new(config)
-      site.output = site.output.gsub(/(?=<\/head>)/i, analytics_object.render())
+      if a=='GoogleAdSense'
+        site.output = site.output.gsub(/(?=<\/footer>)/i, analytics_object.render())
+      else
+        site.output = site.output.gsub(/(?=<\/head>)/i, analytics_object.render())
+      end
     }
   end
 end
