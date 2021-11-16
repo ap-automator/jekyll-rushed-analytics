@@ -22,8 +22,8 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - uses: actions/setup-node@master
-    - uses: paambaati/codeclimate-action@v2.2.4
+    - uses: paambaati/codeclimate-action@v3.0.0
       env:
-        CC_TEST_REPORTER_ID: 6a43d25051c632d736bdd06b6759a0bced224fa970b76f1ea6bf634f6739edd4
+        CC_TEST_REPORTER_ID: 659c18a493d41d369ac7c918305f9d8cfe8686c743db6ccec12d807547397dd8
       with:
         coverageCommand: bundle exec rake

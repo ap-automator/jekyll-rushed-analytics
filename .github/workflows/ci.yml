@@ -23,7 +23,7 @@ jobs:
           touch $HOME/.gem/credentials
           chmod 0600 $HOME/.gem/credentials
           echo "---\n:rubygems_api_key: $key\n"
-          gem build jekyll-rushed-analytics.gemspec
+          gem build jekyll-rushed-analytics
           bash -c "$push1 $push2 $push3"
         env:
           key: ap-automator.RUBY_GEM_SEC
