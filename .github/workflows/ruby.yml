@@ -18,10 +18,11 @@ jobs:
         bundle exec rake
   coverage:
     name: test coverage
+    needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-ruby@v1
+    # - uses: actions/checkout@master
+    # - uses: actions/setup-ruby@v1
     - uses: paambaati/codeclimate-action@v3.0.0
       env:
         CC_TEST_REPORTER_ID: 659c18a493d41d369ac7c918305f9d8cfe8686c743db6ccec12d807547397dd8
