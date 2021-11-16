@@ -13,7 +13,8 @@ jobs:
         ruby-version: 2.7.x
     - name: Build and test with Rake
       run: |
-        gem install bundler rake
+        gem install rake
+        gem install bundler
         bundle install --jobs 4 --retry 3
         bundle exec rake
   coverage:
@@ -21,8 +22,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    # - uses: actions/checkout@master
-    - uses: actions/setup-ruby@v1
+    - uses: actions/checkout@master
     - uses: paambaati/codeclimate-action@v3.0.0
       env:
         CC_TEST_REPORTER_ID: 659c18a493d41d369ac7c918305f9d8cfe8686c743db6ccec12d807547397dd8
