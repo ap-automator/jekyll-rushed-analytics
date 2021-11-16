@@ -17,7 +17,7 @@ jobs:
         version-file: "jekyll-rushed-analytics"
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7.x
+        ruby-version: 2.7
       if: ${{ steps.release.outputs.release_created }}
     - run: bundle install
       if: ${{ steps.release.outputs.release_created }}
