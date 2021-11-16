@@ -17,7 +17,7 @@ jobs:
         bundle install --jobs 4 --retry 3
         bundle exec rake
 
-  Publish code coverage:
+  publish-coverage:
     needs: build
     - name: "exporting test coverage"
     run: |
