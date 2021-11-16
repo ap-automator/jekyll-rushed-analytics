@@ -82,7 +82,7 @@ For testing use
 $ JEKYLL_ENV=production jekyll serve
 ```
 
-## Embed your youtube subscribe button
+## Embed your youtube subscribe button <WIP>
   To enable youtube [subscribe button](https://developers.google.com/youtube/youtube_subscribe_button), add this property on config/pluginname.
 ```yml
   Utube:
