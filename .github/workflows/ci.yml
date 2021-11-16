@@ -21,19 +21,6 @@ jobs:
       if: ${{ steps.release.outputs.release_created }}
     - run: bundle install
       if: ${{ steps.release.outputs.release_created }}
-    # - name: "publish gem"
-    #   run: |
-    #     mkdir -p $HOME/.gem
-    #     touch $HOME/.gem/credentials
-    #     chmod 0600 $HOME/.gem/credentials
-    #     echo "---\n:rubygems_api_key: $key\n"
-    #     gem build jekyll-rushed-analytics
-    #     bash -c "$push1 $push2 $push3"
-    #   env:
-    #     key: ap-automator.RUBY_GEM_SEC
-    #     push1: 'gem push --key github'
-    #     push2: '--host https://rubygems.pkg.github.com/ap-automator'
-    #     push3: 'jekyll-rushed-analytics-*.gem'
   build:
     name: Build + Publish
     runs-on: ubuntu-latest
