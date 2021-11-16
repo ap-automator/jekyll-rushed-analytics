@@ -1,6 +1,6 @@
 name: Ruby
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
         ruby-version: 2.7.x
     - name: Build and test with Rake
       run: |
-        gem install bundler
+        gem install bundler rake
         bundle install --jobs 4 --retry 3
         bundle exec rake
   coverage:
@@ -21,10 +21,14 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    # - uses: actions/checkout@master
     - uses: actions/setup-ruby@v1
     - uses: paambaati/codeclimate-action@v3.0.0
       env:
         CC_TEST_REPORTER_ID: 659c18a493d41d369ac7c918305f9d8cfe8686c743db6ccec12d807547397dd8
       with:
         coverageCommand: bundle exec rake
+    - name: Publish code coverage
+      run: |
+        export GIT_BRANCH="${GITHUB_REF/refs\/heads\//}"
+        ./cc-test-reporter after-build -r ${{secrets.CC_TEST_REPORTER_ID}}
