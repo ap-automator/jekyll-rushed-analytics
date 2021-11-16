@@ -5,11 +5,11 @@ class GoogleAdSense
   '''
   AP= /^ca-pub-\d+$/
 
-  ADSENSE=```
+  ADSENSE='''
   <script async src="https://pagead2.googlesyndication.com/pagead/js
     /adsbygoogle.js?client=%s"
      crossorigin="anonymous"></script>
-  ```
+  '''
   def initialize(config)
     if !(AP.match(config["ad-client"]))
       raise ArgumentError, "mismatch adsense client and "
