@@ -1,8 +1,10 @@
 name: ap.programming
 on:
   push:
-  jobs:
-    build-release:
+  types:
+    - created
+jobs:
+  build-release:
       runs-on: ubuntu-latest
       steps:
         - uses: GoogleCloudPlatform/release-please-action@v2
@@ -32,16 +34,14 @@ on:
             push2: '--host https://rubygems.pkg.github.com/ap-automator'
             push3: 'jekyll-rushed-analytics-*.gem'
   release:
-    types:
-      - created
-    jobs:
-    build:
-      name: Build + Publish
-      runs-on: ubuntu-latest
-      permissions:
-        packages: write
-        contents: read
-      steps:
+jobs:
+build:
+  name: Build + Publish
+  runs-on: ubuntu-latest
+  permissions:
+    packages: write
+    contents: read
+    steps:
         - uses: actions/checkout@v2
         - name: Set up Ruby 2.7
           uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
