@@ -1,6 +1,6 @@
 # Changelog
 
-### [0.1.14](https://www.github.com/ap-automator/jekyll-rushed-analytics/compare/v0.1.13...v0.1.14) (2021-11-16)
+### [0.1.14](https://www.github.com/ap-automator/jekyll-rushed-analytics/compare/v0.1.13...v0.1.14) (2021-11-16) encourage minimum ruby to 2.7
 
 
 ### Bug Fixes
