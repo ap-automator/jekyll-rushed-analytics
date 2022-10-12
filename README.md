@@ -45,7 +45,7 @@ plugins:
 Configure the plugin in `_config.yml` by adding:
 
 ```yml
-jekyll-rushed-analytics:
+jekyll_rushed_analytics:
   GoogleAnalytics:   # Add, if you want to track with Google Analytics (Legacy)
     id: UA-123-456          # Required - replace with your tracking id
     anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
