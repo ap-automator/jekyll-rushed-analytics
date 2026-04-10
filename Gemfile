@@ -6,7 +6,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 group :test do
   gem "simplecov", "~> 0.22.0"
-  gem "simplecov-rcov", "~> 0.3.1"
+  gem "simplecov-rcov", "~> 0.3.7"
   gem "rake", "~> 13.3"
   gem "test-unit", "~> 3.7"
 end
