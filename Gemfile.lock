@@ -1,15 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    docile (1.4.0)
+    docile (1.4.1)
     power_assert (3.0.1)
     rake (13.3.1)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
-    simplecov-html (0.12.3)
-    simplecov-rcov (0.3.1)
+    simplecov-html (0.13.2)
+    simplecov-rcov (0.3.7)
       simplecov (>= 0.4.1)
     simplecov_json_formatter (0.1.4)
     test-unit (3.7.7)
@@ -21,7 +21,7 @@ PLATFORMS
 DEPENDENCIES
   rake (~> 13.3)
   simplecov (~> 0.22.0)
-  simplecov-rcov (~> 0.3.1)
+  simplecov-rcov (~> 0.3.7)
   test-unit (~> 3.7)
 
 BUNDLED WITH
